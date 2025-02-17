@@ -52,7 +52,7 @@ This Django REST Framework (DRF) API allows users to upload a CSV file containin
 
 **Example Request:**
 ```sh
-curl -X POST http://127.0.0.1:8000/usercreation_api/ \n    -H "Content-Type: multipart/form-data" \n    -F "file=@users.csv"
+curl -X POST http://127.0.0.1:8000/usercreation_api/ \n    
 ```
 
 **Response:**
