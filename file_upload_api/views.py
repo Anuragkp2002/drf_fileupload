@@ -26,11 +26,12 @@ class CreateUser(APIView):
             df = pd.read_csv(file, encoding='utf-8')
         except UnicodeDecodeError:
             df = pd.read_csv(file, encoding='ISO-8859-1')
-        print("df:",df)
+        # print("df:",df)
         
         
 
         required_columns = {'name', 'email', 'age'}
+        # print("required_columns",required_columns)
         if not required_columns.issubset(df.columns):
             return Response({"error": "CSV must contain 'name','email','age' columns"}, status=status.HTTP_400_BAD_REQUEST)
 
